@@ -1,0 +1,1 @@
+This is an example of using a local Artifactory repository for loading custom Gradle plugins. It was used to test [this](https://github.com/cosminpolifronie/gradle-plantuml-plugin) plugin fork.
