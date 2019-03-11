@@ -1,0 +1,448 @@
+@startuml
+skinparam componentStyle UML2
+title Test
+
+' Объявление элементов -------------------------------------------------------------------
+frame "Telenet" as aa5d3c3d3fe47efd9916c23e4a9166b4 {
+  component "LSP174" as a568fa65db35b6d2fb9268380eae870f [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP174&jail=2]]
+  note bottom of a568fa65db35b6d2fb9268380eae870f
+GlusterFS
+<b>unknown</b>
+  end note
+  component "LSP175" as 324c1de4f9672a3a9cc22099d7b2efb5 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP175&jail=2]]
+  note bottom of 324c1de4f9672a3a9cc22099d7b2efb5
+GlusterFS
+<b>unknown</b>
+  end note
+  component "LSP179" as 35281856f32bc4411e50c913a96dfef6 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP179&jail=2]]
+  note bottom of 35281856f32bc4411e50c913a96dfef6
+GlusterFS
+<b>unknown</b>
+  end note
+  component "LSP173" as 912c6373f3347ed7bf551fccba80a22a [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP173&jail=2]]
+  note bottom of 912c6373f3347ed7bf551fccba80a22a
+GlusterFS
+<b>unknown</b>
+  end note
+  component "LSP172" as c0fb05a5cd3fbd4588893ad892cde5e2 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP172&jail=2]]
+  note bottom of c0fb05a5cd3fbd4588893ad892cde5e2
+GlusterFS
+<b>unknown</b>
+  end note
+  component "LSP170" as 416c00187e4bff0c2de232ed20f518a6 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP170&jail=2]]
+  note bottom of 416c00187e4bff0c2de232ed20f518a6
+GlusterFS
+<b>unknown</b>
+  end note
+  component "LSP171" as 518fe07329638a77e39b49812a5c917e [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP171&jail=2]]
+  note bottom of 518fe07329638a77e39b49812a5c917e
+GlusterFS
+<b>unknown</b>
+  end note
+  component "LSP177" as eac41d5e8636b68dd253b9046f5c4f64 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP177&jail=2]]
+  note bottom of eac41d5e8636b68dd253b9046f5c4f64
+GlusterFS
+<b>unknown</b>
+  end note
+  component "LSP178" as e13fa5235d193214ce473493771b497c [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP178&jail=2]]
+  note bottom of e13fa5235d193214ce473493771b497c
+GlusterFS
+<b>unknown</b>
+  end note
+  component "LSP176" as c7c6c94d3475f2e263e7345501a9a796 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP176&jail=2]]
+  note bottom of c7c6c94d3475f2e263e7345501a9a796
+GlusterFS
+<b>unknown</b>
+  end note
+  database "LSP21" as cfbc28a762b26b5edddf38af4f68b450 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP21&jail=2]]
+  note bottom of cfbc28a762b26b5edddf38af4f68b450
+тестовая база на пг
+<b>PostgresQL, DB TIX</b>
+  end note
+  database "LSP147" as 1ad8442280c8f5bd123233917cb3b79e [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP147&jail=2]]
+  note bottom of 1ad8442280c8f5bd123233917cb3b79e
+слейв база ТХ
+реплика lsp20
+<b>PostgresQL, DB TOPHOTELS</b>
+  end note
+  database "LSP39" as 377fdab09701ab9fcca86e67690a12ea [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP39&jail=1]]
+  note bottom of 377fdab09701ab9fcca86e67690a12ea
+Новый PGBouncer для ТХ на Талалихина
+<b>PG bouncer</b>
+  end note
+  database "LSP89" as 4b9e397c43dc745977d60fe96aa082f3 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP89&jail=2]]
+  note bottom of 4b9e397c43dc745977d60fe96aa082f3
+слейв база ТХ
+реплика lsp20
+<b>PostgresQL, DB TOPHOTELS</b>
+  end note
+  component "LSP162" as d439cb1576c92ce743da4277d876852a <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP162&jail=1]]
+  note bottom of d439cb1576c92ce743da4277d876852a
+бэкенд ТХ
+<b>Nginx, Apache</b>
+  end note
+  component "LSP163" as 2a8a1c20dead82a19986a1a31934d88f <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP163&jail=1]]
+  note bottom of 2a8a1c20dead82a19986a1a31934d88f
+бэкенд ТХ
+<b>Nginx, Apache</b>
+  end note
+  component "LSP159" as 69d63c9595a528368fa3f6b94ce7b9f3 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP159&jail=1]]
+  note bottom of 69d63c9595a528368fa3f6b94ce7b9f3
+админка ТХ (tophotels.lbc.ru)
+<b>Nginx, Apache</b>
+  end note
+  component "LSP157" as e68e88eae3212c669201ac358377f5e9 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP157&jail=1]]
+  note bottom of e68e88eae3212c669201ac358377f5e9
+бэкенд ТХ
+
+<b>Nginx, Apache</b>
+  end note
+  component "LSP207" as 47d3abdfe066eacb042780ed92340312 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP207&jail=1]]
+  note bottom of 47d3abdfe066eacb042780ed92340312
+бэкенд ТХ
+<b>Nginx, Apache</b>
+  end note
+  component "LSP208" as 9668707fcee65a1b0feb7f293ee61e26 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP208&jail=1]]
+  note bottom of 9668707fcee65a1b0feb7f293ee61e26
+бэкенд ТХ
+<b>Nginx, Apache</b>
+  end note
+  component "LSP235" as e2b4d3e0aed57e902445b704cf25fd8d <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP235&jail=1]]
+  note bottom of e2b4d3e0aed57e902445b704cf25fd8d
+бэкенд ТХ
+<b>Nginx, Apache</b>
+  end note
+  component "LSP128" as 0f11c5e09229104a72a9d77b565a9473 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP128&jail=1]]
+  note bottom of 0f11c5e09229104a72a9d77b565a9473
+бэкенд ТХ
+<b>Nginx, Apache</b>
+  end note
+  component "LSP4" as 23700ee271e588059b5edf04bccd72f2 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP4&jail=1]]
+  note bottom of 23700ee271e588059b5edf04bccd72f2
+<b>Nginx, Apache</b>
+  end note
+  component "LSP137" as 293814b5d37c1040fd48f3b1aac82686 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP137&jail=1]]
+  note bottom of 293814b5d37c1040fd48f3b1aac82686
+бэкенд ТХ
+карантинный
+<b>Nginx, Apache</b>
+  end note
+  component "LSP134" as 3468d50a103adddd80a3683bfcd0caec <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP134&jail=1]]
+  note bottom of 3468d50a103adddd80a3683bfcd0caec
+новый агент паспорт и тревелпаспорт
+<b>Nginx, Apache</b>
+  end note
+  component "LSP63" as df1568ce029e2e91458d4836240b9cbc <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP63&jail=2]]
+  note bottom of df1568ce029e2e91458d4836240b9cbc
+ТХ бэкенд
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSP8" as ff150d1f2e6e70b33ce1d644f461d8c5 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP8&jail=2]]
+  note bottom of ff150d1f2e6e70b33ce1d644f461d8c5
+бэкенд ТХ
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSP7" as 2f5411ef028dee797d9457fd1f5dc5d9 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP7&jail=2]]
+  note bottom of 2f5411ef028dee797d9457fd1f5dc5d9
+бэкенд ТХ
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSP28" as 260a1f3864032f9c54cb5930a0650ad2 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP28&jail=2]]
+  note bottom of 260a1f3864032f9c54cb5930a0650ad2
+ТХ бэкенд
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSP62" as 49152f472383aaef1ff31fc4da092a80 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP62&jail=2]]
+  note bottom of 49152f472383aaef1ff31fc4da092a80
+ТХ бэкенд
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSP156" as 6c643af539677536d3c27ed60b8d2dae <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP156&jail=2]]
+  note bottom of 6c643af539677536d3c27ed60b8d2dae
+бэкенд ТХ
+OpenVZ
+<b>Jail сборка</b>
+  end note
+  component "LSP100" as b65a32d290cfc19ef66de6aecc7436dd <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP100&jail=1]]
+  note bottom of b65a32d290cfc19ef66de6aecc7436dd
+Новый memcached для ТХ на Талалихина
+<b>memcached</b>
+  end note
+  component "LSP10" as 9a9d9e2bb74d39ad9b9e6652857b5142 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP10&jail=2]]
+  note bottom of 9a9d9e2bb74d39ad9b9e6652857b5142
+ТХ бэкенд
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSP18" as 571eb0d1074bd991a6f71882c99ee252 <<Административ>> <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP18&jail=1]]
+  note bottom of 571eb0d1074bd991a6f71882c99ee252
+Предпродакшен
+<b>Nginx, Apache, memcached</b>
+  end note
+  component "LSP29" as 5ba781e828baa17f1e676e7508273e26 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP29&jail=2]]
+  note bottom of 5ba781e828baa17f1e676e7508273e26
+ТХ бэкенд
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSPM18" as 7144efefd45a0a0b4d0c1d9d9a463594 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSPM18&jail=2]]
+  note bottom of 7144efefd45a0a0b4d0c1d9d9a463594
+Мастер для предпродакшена
+<b>Jail мастер</b>
+  end note
+  component "LSPM34" as 6228ab1662724fb52279a9cbe08ad999 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSPM34&jail=2]]
+  note bottom of 6228ab1662724fb52279a9cbe08ad999
+мастер для нового сервера туриндекса
+<b>Jail мастер</b>
+  end note
+  component "LSPM4" as d61bc36ab6abf95ff2fa661210d9d77f <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSPM4&jail=2]]
+  note bottom of d61bc36ab6abf95ff2fa661210d9d77f
+много мелких проектов живет кроме хотелпаспорта
+<b>Jail мастер</b>
+  end note
+  component "LSPM39" as 1ed8e61ea1a0c9ab3475078c449ef890 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSPM39&jail=2]]
+  note bottom of 1ed8e61ea1a0c9ab3475078c449ef890
+Мастер баунсера 
+<b>Jail мастер</b>
+  end note
+  component "LSP189" as 696bb5119e633290db2baae74404c0c0 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSP189&jail=2]]
+  note bottom of 696bb5119e633290db2baae74404c0c0
+Мастер нового memcached ТХ
+<b>Jail мастер</b>
+  end note
+}
+
+frame "Medovaia" as 2dc046acf4fe9923d040d65d1b549caf {
+  component "LSF174" as 48cecfe395687c16739078b235e0cbe5 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF174&jail=2]]
+  note bottom of 48cecfe395687c16739078b235e0cbe5
+GlusterFS new
+<b>unknown</b>
+  end note
+  component "LSF175" as dbf126b922749bb43605b3d7111de5c5 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF175&jail=2]]
+  note bottom of dbf126b922749bb43605b3d7111de5c5
+GlusterFS new
+<b>unknown</b>
+  end note
+  component "LSF173" as 880aaa9d3e29a2f733dbbef3861f49b6 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF173&jail=2]]
+  note bottom of 880aaa9d3e29a2f733dbbef3861f49b6
+GlusterFS new
+<b>unknown</b>
+  end note
+  component "LSF170" as 54e796392f371e4c31f32ae869827136 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF170&jail=2]]
+  note bottom of 54e796392f371e4c31f32ae869827136
+GlusterFS new
+<b>unknown</b>
+  end note
+  component "LSF172" as fc5ec4007dc826a1c650cfad7fda4de6 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF172&jail=2]]
+  note bottom of fc5ec4007dc826a1c650cfad7fda4de6
+GlusterFS new
+<b>unknown</b>
+  end note
+  component "LSF171" as 547d7f0bdc336ce8c5805222b964596d [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF171&jail=2]]
+  note bottom of 547d7f0bdc336ce8c5805222b964596d
+GlusterFS new
+<b>unknown</b>
+  end note
+  database "LSF206" as 6e9fb17b84426657849a6b5d08bf0c7d [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF206&jail=2]]
+  note bottom of 6e9fb17b84426657849a6b5d08bf0c7d
+слейв база ТХ реплика lsp20 
+<b>PostgresQL, DB TOPHOTELS</b>
+  end note
+  database "LSF207" as 14bb0dde22be827742138c8af3310404 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF207&jail=2]]
+  note bottom of 14bb0dde22be827742138c8af3310404
+слейв база ТХ
+реплика lsp20
+<b>PostgresQL, DB TOPHOTELS</b>
+  end note
+  database "LSF39" as e058080480e2bcc3cebdc6b00768c089 [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF39&jail=1]]
+  note bottom of e058080480e2bcc3cebdc6b00768c089
+Новый PGBouncer для ТХ на Медовой
+<b>PG bouncer</b>
+  end note
+  component "LSF193" as 04b661c74c1f4965cb7434ae95dfd167 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF193&jail=1]]
+  note bottom of 04b661c74c1f4965cb7434ae95dfd167
+Тх бэкенд
+<b>Nginx, Apache</b>
+  end note
+  component "LSF192" as 32d3a4e032db901dac5feb8839176f30 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF192&jail=1]]
+  note bottom of 32d3a4e032db901dac5feb8839176f30
+Тх бэкенд
+<b>Nginx, Apache</b>
+  end note
+  component "LSF191" as c4f5a284e5c7b5b86cd5269a5dbd42c0 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF191&jail=1]]
+  note bottom of c4f5a284e5c7b5b86cd5269a5dbd42c0
+Тх бэкенд
+<b>Nginx, Apache</b>
+  end note
+  component "LSF160" as 5c07746fbdccf69b6eddc60d285104a5 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF160&jail=1]]
+  note bottom of 5c07746fbdccf69b6eddc60d285104a5
+Тх бэкенд
+<b>Nginx, Apache</b>
+  end note
+  component "LSF161" as 4467c969ab4fe0fbd28beb4734b7c354 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF161&jail=1]]
+  note bottom of 4467c969ab4fe0fbd28beb4734b7c354
+Тх бэкенд
+<b>Nginx, Apache</b>
+  end note
+  component "LSF190" as c2b476dfa80e46aeff759009e79f6f25 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF190&jail=1]]
+  note bottom of c2b476dfa80e46aeff759009e79f6f25
+Тх бэкенд
+<b>Nginx, Apache</b>
+  end note
+  component "LSF235" as 26d1af0a694df4fb4f776e4cca79fb49 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF235&jail=1]]
+  note bottom of 26d1af0a694df4fb4f776e4cca79fb49
+Новый кеширующий фронтэнд ТХ
+<b>Nginx, Apache</b>
+  end note
+  component "LSF90" as 806a7256f9e9fec1566217076340aa1a <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF90&jail=2]]
+  note bottom of 806a7256f9e9fec1566217076340aa1a
+ТХ бэкенд
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSF61" as f60c377194cf97349e9d3df40097b24b <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF61&jail=2]]
+  note bottom of f60c377194cf97349e9d3df40097b24b
+бэкенд ТХ
+<b>Jail сборка, Jail мастер</b>
+  end note
+  component "LSF60" as 692f3a788c3211860823e5c406c5111a <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF60&jail=2]]
+  note bottom of 692f3a788c3211860823e5c406c5111a
+бекэнд ТХ
+<b>Jail мастер</b>
+  end note
+  component "LSF29" as 7f845920cbc3e89dd4e2ed726d81747e <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF29&jail=1]]
+  note bottom of 7f845920cbc3e89dd4e2ed726d81747e
+Memcached для кеширования на ТХ (пока тестовый)
+<b>memcached</b>
+  end note
+  component "LSF91" as d871936dc9755657d203107590bf8994 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF91&jail=2]]
+  note bottom of d871936dc9755657d203107590bf8994
+ТХ бэкенд
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSF92" as 1863d7dda94c4f83e9fa4a504643177f <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF92&jail=2]]
+  note bottom of 1863d7dda94c4f83e9fa4a504643177f
+ТХ бэкенд
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSF100" as 213ccbfdf52cb1affbfd781a49a94a02 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF100&jail=1]]
+  note bottom of 213ccbfdf52cb1affbfd781a49a94a02
+новый memcached для ТХ на Медовой
+<b>memcached</b>
+  end note
+  component "LSF93" as d5c31127906a536b7c44d0ecf96a9c30 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF93&jail=2]]
+  note bottom of d5c31127906a536b7c44d0ecf96a9c30
+ТХ бэкенд
+OpenVZ
+<b>Jail мастер</b>
+  end note
+  component "LSF234" as 5a98b09fd9389b2f64cb09218f6e790e <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF234&jail=2]]
+  note bottom of 5a98b09fd9389b2f64cb09218f6e790e
+Мастер нового кеширующего фронтэнда ТХ
+<b>Jail мастер</b>
+  end note
+  component "LSFM39" as 3b8bfe7a29cec8d37ed3de0f5375d5e7 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSFM39&jail=2]]
+  note bottom of 3b8bfe7a29cec8d37ed3de0f5375d5e7
+Мастер баунсера
+<b>Jail мастер</b>
+  end note
+  component "LSF189" as c93cb8067cdbdf918ee9b25787129fcb <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF189&jail=2]]
+  note bottom of c93cb8067cdbdf918ee9b25787129fcb
+Мастер нового memcached ТХ
+<b>Jail мастер</b>
+  end note
+}
+
+component "LSF159" as 57fbd4341ec87a14e0c84c53cab2fd7f <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSF159&jail=1]]
+note bottom of 57fbd4341ec87a14e0c84c53cab2fd7f
+Тх бэкенд
+<b>Nginx, Apache</b>
+end note
+frame "Softwares" as e08f796833961f9c121868bb187540f9 {
+  component "LST32" as 33ed3a9dba72e1e9a1abbb082ede8847 <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LST32&jail=1]]
+  note bottom of 33ed3a9dba72e1e9a1abbb082ede8847
+Внутренние проекты
+<b>Nginx, Apache</b>
+  end note
+  component "LST36" as 415c0ef5735c2c0b4e469fde1468193e <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LST36&jail=1]]
+  note bottom of 415c0ef5735c2c0b4e469fde1468193e
+hotelpromo.ru
+<b>Nginx, Apache</b>
+  end note
+  component "LST207" as dd0cd159b49a0757898bc5a6e470f53b <<Административ>> <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LST207&jail=1]]
+  note bottom of dd0cd159b49a0757898bc5a6e470f53b
+Тестовый веб сервер
+<b>Nginx, Apache, Rsyncd, memcached, samba</b>
+  end note
+  component "LSTM36" as 1985ddccce882a98d6152e8c46f3f7d7 <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSTM36&jail=2]]
+  note bottom of 1985ddccce882a98d6152e8c46f3f7d7
+мастер лст36
+несколько внутренних проектов и hotelpromo
+<b>Jail мастер</b>
+  end note
+  component "LSTM16" as b24057a7e2b6e2f18657b8d272370ffb <<Административ>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LSTM16&jail=2]]
+  note bottom of b24057a7e2b6e2f18657b8d272370ffb
+Мастер тестовый
+<b>Jail мастер</b>
+  end note
+}
+
+component "LST22" as 940fc8a2529aac405ccad71319e5a93b <<webserver>> [[http://ls-server.ls1.ru/?__submit=1&details&namel=LST22&jail=1]]
+note bottom of 940fc8a2529aac405ccad71319e5a93b
+Sandbox
+<b>Nginx, Apache</b>
+end note
+
+' Объявление отношений -------------------------------------------------------------------
+1ed8e61ea1a0c9ab3475078c449ef890 <|-- 377fdab09701ab9fcca86e67690a12ea
+3b8bfe7a29cec8d37ed3de0f5375d5e7 <|-- e058080480e2bcc3cebdc6b00768c089
+d5c31127906a536b7c44d0ecf96a9c30 <|-- 04b661c74c1f4965cb7434ae95dfd167
+49152f472383aaef1ff31fc4da092a80 <|-- d439cb1576c92ce743da4277d876852a
+df1568ce029e2e91458d4836240b9cbc <|-- 2a8a1c20dead82a19986a1a31934d88f
+1863d7dda94c4f83e9fa4a504643177f <|-- 32d3a4e032db901dac5feb8839176f30
+d871936dc9755657d203107590bf8994 <|-- c4f5a284e5c7b5b86cd5269a5dbd42c0
+692f3a788c3211860823e5c406c5111a <|-- 5c07746fbdccf69b6eddc60d285104a5
+f60c377194cf97349e9d3df40097b24b <|-- 4467c969ab4fe0fbd28beb4734b7c354
+806a7256f9e9fec1566217076340aa1a <|-- c2b476dfa80e46aeff759009e79f6f25
+9a9d9e2bb74d39ad9b9e6652857b5142 <|-- 69d63c9595a528368fa3f6b94ce7b9f3
+6c643af539677536d3c27ed60b8d2dae <|-- e68e88eae3212c669201ac358377f5e9
+2f5411ef028dee797d9457fd1f5dc5d9 <|-- 47d3abdfe066eacb042780ed92340312
+ff150d1f2e6e70b33ce1d644f461d8c5 <|-- 9668707fcee65a1b0feb7f293ee61e26
+5ba781e828baa17f1e676e7508273e26 <|-- e2b4d3e0aed57e902445b704cf25fd8d
+1985ddccce882a98d6152e8c46f3f7d7 <|-- 415c0ef5735c2c0b4e469fde1468193e
+260a1f3864032f9c54cb5930a0650ad2 <|-- 0f11c5e09229104a72a9d77b565a9473
+d61bc36ab6abf95ff2fa661210d9d77f <|-- 23700ee271e588059b5edf04bccd72f2
+5a98b09fd9389b2f64cb09218f6e790e <|-- 26d1af0a694df4fb4f776e4cca79fb49
+260a1f3864032f9c54cb5930a0650ad2 <|-- 293814b5d37c1040fd48f3b1aac82686
+6228ab1662724fb52279a9cbe08ad999 <|-- 3468d50a103adddd80a3683bfcd0caec
+b24057a7e2b6e2f18657b8d272370ffb <|-- dd0cd159b49a0757898bc5a6e470f53b
+c93cb8067cdbdf918ee9b25787129fcb <|-- 7f845920cbc3e89dd4e2ed726d81747e
+c93cb8067cdbdf918ee9b25787129fcb <|-- 213ccbfdf52cb1affbfd781a49a94a02
+696bb5119e633290db2baae74404c0c0 <|-- b65a32d290cfc19ef66de6aecc7436dd
+7144efefd45a0a0b4d0c1d9d9a463594 <|-- 571eb0d1074bd991a6f71882c99ee252
+
+' Стилизация диаграммы -------------------------------------------------------------------
+skinparam  {
+  noteBackgroundColor f0f0f0
+  noteBorderColor 707070
+}
+skinparam database {
+  backgroundColor FFFFFF/A4D1FE
+}
+
+' Стили отдельных стереотипов
+skinparam component {
+  backgroundColor<<webserver>> white/lightgreen
+}
+skinparam component {
+  backgroundColor<<Административ>> white/FE812D
+}
+
+@enduml
