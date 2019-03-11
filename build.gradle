@@ -1,6 +1,6 @@
 plugins {
 	// this is a custom plugin that will be found on a local Artifactory repository
-	id 'de.gafertp.plantuml' version '2.0.0'
+	id 'de.gafertp.plantuml' version '2.1.0'
 }
 
 plantUml {

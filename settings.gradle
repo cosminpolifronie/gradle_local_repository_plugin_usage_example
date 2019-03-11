@@ -1,7 +1,7 @@
 pluginManagement {
     repositories {
         maven {
-            url "${artifactory_contextUrl}"
+            url "${artifactory_contextUrl_resolve}"
         }
 	}
 }
